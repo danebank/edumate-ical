@@ -1,0 +1,19 @@
+{
+  "name": "edumate-ical",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Davis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "ibm_db": "^2.3.0",
+    "ics": "^2.4.1",
+    "morgan": "^1.9.0",
+    "node-schedule": "^1.3.0",
+    "nodemon": "^1.17.3"
+  }
+}
