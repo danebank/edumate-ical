@@ -71,13 +71,13 @@ var j = schedule.scheduleJob('*/1 * * * *', function(){
         	if(data[i].CATEGORY == "Jnr General") {jnrEventsTemp.push(event);}
         }
         
-        // copy temp arrays to live calendar arrays - only after a successful DB query
+        // copy temp arrays to live calendar arrays 
 		staffEvents = staffEventsTemp;
   		snrEvents = snrEventsTemp;
   		jnrEvents = jnrEventsTemp; 
       }
       conn.close();
-    });
+    }); 
   });
   
   
