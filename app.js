@@ -4,7 +4,8 @@ const schedule = require('node-schedule');
 const ics = require('ics');
 const edumatedb = require('ibm_db');
 const config = require('./config');
-const dateFormat = require('dateFormat');
+const dateFormat = require('dateformat');
+const logTimestamp = require('log-timestamp');
 
 // initialise app
 const app = express();
@@ -71,13 +72,13 @@ var j = schedule.scheduleJob('*/1 * * * *', function(){
         	if(data[i].CATEGORY == "Jnr General") {jnrEventsTemp.push(event);}
         }
         
-        // copy temp arrays to live calendar arrays 
+        // copy temp arrays to live calendar arrays - only after a successful DB query
 		staffEvents = staffEventsTemp;
   		snrEvents = snrEventsTemp;
   		jnrEvents = jnrEventsTemp; 
       }
       conn.close();
-    }); 
+    });
   });
   
   
